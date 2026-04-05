@@ -70,11 +70,73 @@
         scrollbar-width: thin;
         scrollbar-color: rgba(168, 85, 247, 0.45) transparent;
       }
+
+      .contact-shell {
+        background: linear-gradient(130deg, rgba(17, 24, 39, 0.78), rgba(9, 14, 30, 0.94));
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06), 0 18px 50px rgba(0, 0, 0, 0.45);
+      }
+      .contact-card {
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background: linear-gradient(165deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
+        backdrop-filter: blur(12px);
+      }
+      .contact-link {
+        display: block;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 0.95rem;
+        padding: 0.95rem;
+        background: rgba(2, 6, 23, 0.48);
+        transition: transform .22s ease, border-color .22s ease, background .22s ease;
+      }
+      .contact-link:hover {
+        transform: translateY(-2px);
+        border-color: rgba(236,72,153,.65);
+        background: rgba(236,72,153,.09);
+      }
+      .contact-label {
+        display: block;
+        font-size: .68rem;
+        text-transform: uppercase;
+        letter-spacing: .18em;
+        color: rgba(255,255,255,.55);
+      }
+      .contact-value {
+        display: block;
+        margin-top: .4rem;
+        font-size: 1.06rem;
+        font-weight: 600;
+        color: rgba(255,255,255,.94);
+        word-break: break-word;
+      }
+      .contact-hint {
+        display: block;
+        margin-top: .45rem;
+        font-size: .8rem;
+        color: rgba(255,255,255,.65);
+      }
+      .contact-cta {
+        display: block;
+        border-radius: .95rem;
+        border: 1px solid rgba(255,255,255,.2);
+        background: rgba(255,255,255,.06);
+        padding: .85rem 1rem;
+        font-size: .9rem;
+        font-weight: 600;
+        color: rgba(255,255,255,.9);
+        transition: border-color .22s ease, color .22s ease, background .22s ease, transform .22s ease;
+      }
+      .contact-cta:hover {
+        transform: translateY(-2px);
+        border-color: rgba(236,72,153,.75);
+        color: #fff;
+        background: rgba(236,72,153,.15);
+      }
+
       @media (prefers-reduced-motion: reduce) {
-        .specialty-card, .section-card {
+        .specialty-card, .section-card, .contact-link, .contact-cta {
           transition: none;
         }
-        .specialty-card:hover, .section-card:hover {
+        .specialty-card:hover, .section-card:hover, .contact-link:hover, .contact-cta:hover {
           transform: none;
         }
       }
@@ -143,12 +205,9 @@
 
         <section id="management" class="mt-20">
           <h2 class="text-2xl font-semibold sm:text-3xl">Management &amp; Leadership</h2>
-          <p class="mt-4 max-w-4xl text-white/75">Executive-level management built around staff accountability, command communication, and long-term community performance across day-to-day operations.</p>
-          <div class="mt-7 grid gap-4 sm:gap-5 md:grid-cols-3">
-            <article class="section-card glass rounded-2xl p-5 sm:p-6">
           <p class="mt-4 max-w-4xl text-white/75">Executive-level management built around staff accountability, command communication, and long-term community performance across day-to-day operations, informed by hands-on public service field leadership and interagency coordination experience.</p>
           <div class="mt-7 grid gap-5 md:grid-cols-3">
-            <article class="glass rounded-2xl p-5">
+            <article class="section-card glass rounded-2xl p-5 sm:p-6">
               <p class="text-xs uppercase tracking-[0.16em] text-neonPink">Operations</p>
               <h3 class="mt-2 text-lg font-semibold">Staff Infrastructure</h3>
               <p class="mt-2 text-sm text-white/75">Structured training pipelines, measurable promotion standards, and clear role ownership that raise consistency and reduce command friction.</p>
@@ -163,7 +222,7 @@
               <h3 class="mt-2 text-lg font-semibold">Community Performance</h3>
               <p class="mt-2 text-sm text-white/75">Policy enforcement, escalation workflows, and operational optimization focused on retention, structure, and sustainable server health.</p>
             </article>
-            <article class="glass rounded-2xl p-5 md:col-span-3">
+            <article class="section-card glass rounded-2xl p-5 md:col-span-3">
               <p class="text-xs uppercase tracking-[0.16em] text-neonPink">Public Services</p>
               <h3 class="mt-2 text-lg font-semibold">Law Enforcement-Aligned Experience</h3>
               <p class="mt-2 text-sm text-white/75">Experience shaped by statewide patrol operations, citation and traffic enforcement standards, and county-level office coordination translates into calm command judgment, clear reporting, and dependable response structure for roleplay communities.</p>
@@ -291,20 +350,58 @@
 
       <footer id="contact" class="border-t border-white/10 bg-black/40">
         <div class="mx-auto max-w-6xl px-5 py-12 sm:px-8 lg:px-10">
-          <h2 class="text-2xl font-semibold sm:text-3xl">Contact Info</h2>
-          <p class="mt-3 max-w-3xl text-white/75">
-            Reach out directly through Discord or email.
-          </p>
-          <div class="mt-8 grid gap-5">
-            <article class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
-              <p class="text-xs uppercase tracking-[0.18em] text-white/50">Primary Contact</p>
-              <p class="mt-3 text-sm text-white/80">Discord user: <a href="https://discord.com/users/1239226604782354533" target="_blank" rel="noreferrer" class="text-neonPink transition hover:text-white">6ntc</a></p>
-              <p class="mt-2 text-sm text-white/70">Discord ID: 1239226604782354533</p>
-              <div class="mt-4 space-y-1 text-sm text-white/80">
-                <p>Email: <a href="mailto:ham@gvrpa.com" class="text-neonPink transition hover:text-white">ham@gvrpa.com</a></p>
-                <p>Email: <a href="mailto:ham@mygrief.lol" class="text-neonPink transition hover:text-white">ham@mygrief.lol</a></p>
+          <div class="contact-shell relative overflow-hidden rounded-[2rem] border border-white/10 p-6 sm:p-8">
+            <div class="pointer-events-none absolute -left-24 -top-28 h-64 w-64 rounded-full bg-neonPurple/20 blur-3xl"></div>
+            <div class="pointer-events-none absolute -bottom-28 -right-20 h-64 w-64 rounded-full bg-neonPink/20 blur-3xl"></div>
+
+            <div class="relative flex flex-wrap items-start justify-between gap-6">
+              <div class="max-w-2xl">
+                <p class="inline-flex items-center rounded-full border border-neonPink/30 bg-neonPink/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-neonPink">Direct Contact</p>
+                <h2 class="mt-4 text-2xl font-semibold sm:text-3xl">Contact Info</h2>
+                <p class="mt-3 text-white/75">Prefer Discord for fastest response. Email is best for project scopes, timelines, or formal requests.</p>
               </div>
-            </article>
+              <div class="glass-soft rounded-2xl border-white/20 px-4 py-3 text-sm text-white/85">
+                Typical response window
+                <p class="mt-1 text-base font-semibold text-white">Same day - 24 hours</p>
+              </div>
+            </div>
+
+            <div class="relative mt-8 grid gap-4 lg:grid-cols-[1.25fr_0.75fr]">
+              <article class="contact-card rounded-2xl p-5 sm:p-6">
+                <p class="text-xs uppercase tracking-[0.18em] text-neonPink/90">Primary Contact</p>
+                <div class="mt-4 grid gap-3 sm:grid-cols-2">
+                  <a href="https://discord.com/users/1239226604782354533" target="_blank" rel="noreferrer" class="contact-link group">
+                    <span class="contact-label">Discord User</span>
+                    <span class="contact-value">6ntc</span>
+                    <span class="contact-hint">Open Discord profile ↗</span>
+                  </a>
+                  <div class="contact-link">
+                    <span class="contact-label">Discord ID</span>
+                    <span class="contact-value text-base">1239226604782354533</span>
+                    <span class="contact-hint">Use this to verify profile</span>
+                  </div>
+                  <a href="mailto:ham@gvrpa.com" class="contact-link group">
+                    <span class="contact-label">Primary Email</span>
+                    <span class="contact-value">ham@gvrpa.com</span>
+                    <span class="contact-hint">Best for project inquiries</span>
+                  </a>
+                  <a href="mailto:ham@mygrief.lol" class="contact-link group">
+                    <span class="contact-label">Backup Email</span>
+                    <span class="contact-value">ham@mygrief.lol</span>
+                    <span class="contact-hint">Secondary contact route</span>
+                  </a>
+                </div>
+              </article>
+
+              <aside class="contact-card rounded-2xl p-5 sm:p-6">
+                <p class="text-xs uppercase tracking-[0.18em] text-neonPink/90">Quick Actions</p>
+                <div class="mt-4 space-y-3">
+                  <a href="https://discord.com/users/1239226604782354533" target="_blank" rel="noreferrer" class="contact-cta">Message on Discord</a>
+                  <a href="mailto:ham@gvrpa.com?subject=Project%20Inquiry" class="contact-cta">Start email inquiry</a>
+                  <a href="mailto:ham@mygrief.lol?subject=General%20Question" class="contact-cta">Send general question</a>
+                </div>
+              </aside>
+            </div>
           </div>
         </div>
       </footer>
