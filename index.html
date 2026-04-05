@@ -28,10 +28,22 @@
     </script>
     <style>
       html { scroll-behavior: smooth; }
+      body {
+        background:
+          radial-gradient(1200px 600px at 12% -10%, rgba(168, 85, 247, 0.25), transparent 55%),
+          radial-gradient(900px 500px at 88% 0%, rgba(236, 72, 153, 0.18), transparent 55%),
+          linear-gradient(180deg, #090f1f 0%, #05070f 45%, #02040a 100%);
+      }
+      section { scroll-margin-top: 7rem; }
       .glass {
         background: linear-gradient(160deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03));
         border: 1px solid rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(14px);
+      }
+      .glass-soft {
+        background: linear-gradient(160deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02));
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(10px);
       }
       .specialty-card {
         transition: transform .3s ease, border-color .3s ease, background .3s ease, box-shadow .3s ease;
@@ -45,16 +57,43 @@
       details[open] summary .expand-icon {
         transform: rotate(45deg);
       }
+      .section-card {
+        transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+      }
+      .section-card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(236,72,153,.45);
+        box-shadow: 0 14px 40px rgba(8, 12, 26, 0.65);
+      }
+      .mobile-scroll-x {
+        overflow-x: auto;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(168, 85, 247, 0.45) transparent;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .specialty-card, .section-card {
+          transition: none;
+        }
+        .specialty-card:hover, .section-card:hover {
+          transform: none;
+        }
+      }
     </style>
   </head>
   <body class="bg-slateNight text-white antialiased">
     <div class="min-h-screen bg-gradient-to-b from-deepBlue via-slateNight to-black">
-      <main class="mx-auto w-full max-w-6xl px-5 pb-20 pt-10 sm:px-8 lg:px-10">
-        <header class="glass rounded-full px-5 py-3 text-xs tracking-[0.22em] text-white/80 sm:text-sm">
-          Sv.
+      <main class="mx-auto w-full max-w-6xl px-4 pb-20 pt-6 sm:px-8 sm:pt-10 lg:px-10">
+        <header class="glass sticky top-3 z-20 flex flex-wrap items-center justify-between gap-2 rounded-2xl px-4 py-3 text-xs tracking-[0.22em] text-white/80 sm:rounded-full sm:px-5 sm:text-sm">
+          <span>Sv.</span>
+          <nav class="flex flex-wrap gap-2 text-[11px] font-semibold tracking-[0.12em] sm:text-xs">
+            <a href="#management" class="rounded-full border border-white/15 bg-black/20 px-3 py-1.5 transition hover:border-neonPink/60 hover:text-neonPink">Management</a>
+            <a href="#portfolio" class="rounded-full border border-white/15 bg-black/20 px-3 py-1.5 transition hover:border-neonPink/60 hover:text-neonPink">Portfolio</a>
+            <a href="#development" class="rounded-full border border-white/15 bg-black/20 px-3 py-1.5 transition hover:border-neonPink/60 hover:text-neonPink">Services</a>
+            <a href="#contact" class="rounded-full border border-white/15 bg-black/20 px-3 py-1.5 transition hover:border-neonPink/60 hover:text-neonPink">Contact</a>
+          </nav>
         </header>
 
-        <section class="mt-12 grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+        <section class="mt-10 grid gap-8 sm:gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div>
             <p class="mb-4 inline-flex items-center rounded-full border border-neonPurple/50 bg-neonPurple/10 px-4 py-1 text-xs font-medium tracking-[0.18em] text-neonPink/90">
               SV.
@@ -74,7 +113,7 @@
               </a>
             </div>
           </div>
-          <div class="glass rounded-[2rem] p-6">
+          <div class="glass rounded-[2rem] p-5 sm:p-6">
             <p class="text-sm text-white/70">I specialize in:</p>
             <div class="mt-4 space-y-3 text-sm sm:text-base">
               <article class="specialty-card rounded-2xl border border-white/10 bg-black/20 p-4">
@@ -104,6 +143,9 @@
 
         <section id="management" class="mt-20">
           <h2 class="text-2xl font-semibold sm:text-3xl">Management &amp; Leadership</h2>
+          <p class="mt-4 max-w-4xl text-white/75">Executive-level management built around staff accountability, command communication, and long-term community performance across day-to-day operations.</p>
+          <div class="mt-7 grid gap-4 sm:gap-5 md:grid-cols-3">
+            <article class="section-card glass rounded-2xl p-5 sm:p-6">
           <p class="mt-4 max-w-4xl text-white/75">Executive-level management built around staff accountability, command communication, and long-term community performance across day-to-day operations, informed by hands-on public service field leadership and interagency coordination experience.</p>
           <div class="mt-7 grid gap-5 md:grid-cols-3">
             <article class="glass rounded-2xl p-5">
@@ -111,12 +153,12 @@
               <h3 class="mt-2 text-lg font-semibold">Staff Infrastructure</h3>
               <p class="mt-2 text-sm text-white/75">Structured training pipelines, measurable promotion standards, and clear role ownership that raise consistency and reduce command friction.</p>
             </article>
-            <article class="glass rounded-2xl p-5">
+            <article class="section-card glass rounded-2xl p-5 sm:p-6">
               <p class="text-xs uppercase tracking-[0.16em] text-neonPink">Leadership Strategy</p>
               <h3 class="mt-2 text-lg font-semibold">Command Mentorship</h3>
               <p class="mt-2 text-sm text-white/75">Direct support for HR, Low Command, and Middle Command with policy interpretation, escalation handling, and actionable coaching workflows.</p>
             </article>
-            <article class="glass rounded-2xl p-5">
+            <article class="section-card glass rounded-2xl p-5 sm:p-6">
               <p class="text-xs uppercase tracking-[0.16em] text-neonPink">Execution</p>
               <h3 class="mt-2 text-lg font-semibold">Community Performance</h3>
               <p class="mt-2 text-sm text-white/75">Policy enforcement, escalation workflows, and operational optimization focused on retention, structure, and sustainable server health.</p>
@@ -136,8 +178,8 @@
           <p class="mt-4 max-w-4xl text-white/75">A curated overview of ownership and senior command experience across Greenville roleplay communities, focused on transitions, structure, and long-term operational impact.</p>
           <div id="portfolio-details" class="mt-7 grid gap-4">
             <details class="group glass rounded-2xl border border-white/10 p-5 transition hover:border-neonPink/40 hover:shadow-glow">
-              <summary class="flex cursor-pointer list-none items-center justify-between rounded-xl bg-black/20 px-4 py-3 text-lg font-semibold">
-                <span class="flex items-center gap-2"><span class="rounded-full border border-neonPink/40 bg-neonPink/10 px-2 py-0.5 text-[10px] uppercase tracking-[0.2em] text-neonPink">Ownership</span>Ownership Experience</span>
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-3 rounded-xl bg-black/20 px-4 py-3 text-base font-semibold sm:text-lg">
+                <span class="flex min-w-0 items-center gap-2"><span class="shrink-0 rounded-full border border-neonPink/40 bg-neonPink/10 px-2 py-0.5 text-[10px] uppercase tracking-[0.2em] text-neonPink">Ownership</span><span class="truncate sm:whitespace-normal">Ownership Experience</span></span>
                 <span class="expand-icon text-sm text-neonPink transition">+</span>
               </summary>
               <ul class="mt-4 space-y-3 text-sm text-white/80">
@@ -158,8 +200,8 @@
             </details>
 
             <details class="group glass rounded-2xl border border-white/10 p-5 transition hover:border-neonPink/40 hover:shadow-glow">
-              <summary class="flex cursor-pointer list-none items-center justify-between rounded-xl bg-black/20 px-4 py-3 text-lg font-semibold">
-                <span class="flex items-center gap-2"><span class="rounded-full border border-neonPink/40 bg-neonPink/10 px-2 py-0.5 text-[10px] uppercase tracking-[0.2em] text-neonPink">Leadership</span>Senior Command Experience</span>
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-3 rounded-xl bg-black/20 px-4 py-3 text-base font-semibold sm:text-lg">
+                <span class="flex min-w-0 items-center gap-2"><span class="shrink-0 rounded-full border border-neonPink/40 bg-neonPink/10 px-2 py-0.5 text-[10px] uppercase tracking-[0.2em] text-neonPink">Leadership</span><span class="truncate sm:whitespace-normal">Senior Command Experience</span></span>
                 <span class="expand-icon text-sm text-neonPink transition">+</span>
               </summary>
               <ul class="mt-4 space-y-3 text-sm text-white/80">
@@ -187,18 +229,18 @@
             <article class="glass order-first rounded-2xl p-5">
               <h3 class="text-lg font-semibold">Featured Communities</h3>
               <p class="mt-2 text-sm text-white/70">Primary communities represented in ownership and senior command experience.</p>
-              <div class="mt-4 grid gap-4 sm:grid-cols-3">
-                <article class="rounded-2xl border border-white/10 bg-black/20 p-4 text-center">
+              <div class="mobile-scroll-x mt-4 grid auto-cols-[minmax(210px,1fr)] grid-flow-col gap-4 pb-1 sm:grid-flow-row sm:grid-cols-3">
+                <article class="section-card rounded-2xl border border-white/10 bg-black/20 p-4 text-center">
                   <img src="./gvrpasmall.png" alt="Greenville Roleplay Affiliation logo" class="mx-auto h-24 w-24 rounded-full border border-white/20 object-cover" />
                   <p class="mt-3 text-sm font-semibold">Greenville Roleplay Affiliation</p>
                   <p class="mt-1 text-xs text-white/70">Current Co-Owner / Ownership Team</p>
                 </article>
-                <article class="rounded-2xl border border-white/10 bg-black/20 p-4 text-center">
+                <article class="section-card rounded-2xl border border-white/10 bg-black/20 p-4 text-center">
                   <img src="./gvrvsmall.png" alt="Greenville Roleplay Village logo" class="mx-auto h-24 w-24 rounded-full border border-white/20 object-cover" />
                   <p class="mt-3 text-sm font-semibold">Greenville Roleplay Village</p>
                   <p class="mt-1 text-xs text-white/70">Executive Management (Senior High Command)</p>
                 </article>
-                <article class="rounded-2xl border border-white/10 bg-black/20 p-4 text-center">
+                <article class="section-card rounded-2xl border border-white/10 bg-black/20 p-4 text-center">
                   <img src="./gvre-small.png" alt="Greenville Roleplay Empire logo" class="mx-auto h-24 w-24 rounded-full border border-white/20 object-cover" />
                   <p class="mt-3 text-sm font-semibold">Greenville Roleplay Empire</p>
                   <p class="mt-1 text-xs text-white/70">Staffing Manager</p>
