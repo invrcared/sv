@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greenville Roleplay Manager & Developer</title>
+    <meta
+      name="description"
+      content="Expert Greenville Roleplay management and development services."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              slateNight: '#06090f',
+              deepBlue: '#0b1324',
+              neonPurple: '#a855f7',
+              neonPink: '#ec4899'
+            },
+            boxShadow: {
+              glow: '0 0 0 1px rgba(168,85,247,.35), 0 8px 30px rgba(168,85,247,.15)'
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      .floating {
+        animation: float 4.5s ease-in-out infinite;
+      }
+      .glass-grid {
+        background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+        background-size: 28px 28px;
+      }
+    </style>
+  </head>
+  <body class="bg-slateNight text-white antialiased">
+    <div class="relative min-h-screen bg-gradient-to-b from-deepBlue via-slateNight to-black">
+      <div class="pointer-events-none absolute inset-0 overflow-hidden">
+        <div class="floating absolute -left-16 top-16 h-64 w-64 rounded-full bg-neonPurple/15 blur-3xl"></div>
+        <div class="floating absolute right-0 top-56 h-72 w-72 rounded-full bg-neonPink/10 blur-3xl [animation-delay:1s]"></div>
+      </div>
+      <main class="mx-auto w-full max-w-6xl px-5 pb-20 pt-10 sm:px-8 lg:px-10">
+        <header class="flex flex-wrap items-center justify-between gap-3 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-xs tracking-[0.22em] text-white/70 backdrop-blur sm:text-sm">
+          <span>SV.</span>
+          <span class="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[10px] tracking-[0.15em] text-white/75 sm:text-xs">
+            AKA: sv · Yusuf · Ham
+          </span>
+        </header>
+
+        <section class="mt-12 grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+          <div>
+            <p class="mb-4 inline-flex items-center rounded-full border border-neonPurple/50 bg-neonPurple/10 px-4 py-1 text-xs font-medium tracking-[0.18em] text-neonPink/90">
+              MANAGEMENT + DEVELOPMENT
+            </p>
+            <h1 class="text-3xl font-semibold leading-tight sm:text-5xl">
+              Expert Greenville Roleplay Manager &amp; Developer
+            </h1>
+            <p class="mt-6 max-w-2xl text-base text-white/75 sm:text-lg">
+              Elevating communities through adaptable leadership, expert staff training, and custom digital solutions.
+            </p>
+            <p class="mt-4 max-w-2xl text-sm text-neonPink/90 sm:text-base">
+              I also go by <strong>sv</strong>, <strong>Yusuf</strong>, or <strong>Ham</strong> — Roblox: <span class="rounded-full border border-neonPurple/40 bg-neonPurple/10 px-3 py-1 font-semibold text-white">@YusufInTheTrap</span>
+            </p>
+            <a
+              href="#contact"
+              class="mt-8 inline-flex items-center rounded-full bg-gradient-to-r from-neonPurple to-neonPink px-7 py-3 text-sm font-semibold text-white shadow-glow transition hover:scale-[1.02]"
+            >
+              Let's Work Together
+            </a>
+            <a
+              href="#learn-more"
+              class="mt-4 ml-0 inline-flex items-center rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 transition hover:border-neonPink hover:text-neonPink sm:ml-3"
+            >
+              Click here to learn more about my portfolio
+            </a>
+          </div>
+          <div class="glass-grid rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur">
+            <div class="flex items-center justify-between">
+              <p class="text-sm font-medium tracking-[0.16em] text-white/70">SPECIALIZED IN</p>
+              <span class="rounded-full border border-neonPurple/40 bg-neonPurple/10 px-3 py-1 text-xs font-semibold text-neonPink">LIVE CAPABILITIES</span>
+            </div>
+            <div class="mt-5 grid gap-3">
+              <button data-focus="training" class="focus-btn group rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-left transition hover:border-neonPink/70 hover:bg-neonPurple/10">
+                <p class="font-semibold">Staff Training & Policy Systems</p>
+                <p class="mt-1 text-xs text-white/60">Onboarding SOPs · Audits · Incident workflow</p>
+              </button>
+              <button data-focus="leadership" class="focus-btn group rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-left transition hover:border-neonPink/70 hover:bg-neonPurple/10">
+                <p class="font-semibold">Command Structure Leadership</p>
+                <p class="mt-1 text-xs text-white/60">HR · Low Command · Middle Command</p>
+              </button>
+              <button data-focus="tools" class="focus-btn group rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-left transition hover:border-neonPink/70 hover:bg-neonPurple/10">
+                <p class="font-semibold">Automation & Internal Tools</p>
+                <p class="mt-1 text-xs text-white/60">Dashboards · Utility bots · Workflow scripts</p>
+              </button>
+            </div>
+            <div class="mt-5 rounded-2xl border border-neonPurple/30 bg-black/40 p-4">
+              <p class="text-xs uppercase tracking-[0.18em] text-white/50">Current Focus</p>
+              <p id="focus-output" class="mt-2 text-sm text-neonPink">Training pipelines that improve staff consistency and response quality.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="management" class="mt-20">
+          <h2 class="text-2xl font-semibold sm:text-3xl">Management &amp; Leadership</h2>
+          <p class="mt-5 max-w-4xl rounded-[2rem] border border-white/10 bg-white/5 p-7 leading-relaxed text-white/80 backdrop-blur">
+            I specialize in comprehensive community management. With extensive experience in training staff,
+            enforcing community guidelines, and maintaining highly organized operations, I bring adaptable
+            leadership to HR, Low Command, and Middle Command roles. I provide unique operational tools and
+            hands-on assistance that set communities up for long-term success.
+          </p>
+          <div class="mt-6 grid gap-4 sm:grid-cols-3">
+            <article class="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur transition hover:-translate-y-1 hover:border-neonPurple/60">
+              <p class="text-xs tracking-[0.16em] text-white/50">OPERATIONS</p>
+              <p class="mt-2 text-2xl font-semibold text-neonPink">HR+</p>
+              <p class="mt-2 text-sm text-white/70">Policy enforcement, escalation pathways, and precision moderation plans.</p>
+            </article>
+            <article class="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur transition hover:-translate-y-1 hover:border-neonPurple/60">
+              <p class="text-xs tracking-[0.16em] text-white/50">STRUCTURE</p>
+              <p class="mt-2 text-2xl font-semibold text-neonPink">LC / MC</p>
+              <p class="mt-2 text-sm text-white/70">Chain-of-command clarity, role ownership, and conflict resolution systems.</p>
+            </article>
+            <article class="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur transition hover:-translate-y-1 hover:border-neonPurple/60">
+              <p class="text-xs tracking-[0.16em] text-white/50">EXECUTION</p>
+              <p class="mt-2 text-2xl font-semibold text-neonPink">TOOLS</p>
+              <p class="mt-2 text-sm text-white/70">Hand-built operational tools that reduce admin workload and increase speed.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="learn-more" class="mt-20">
+          <h2 class="text-2xl font-semibold sm:text-3xl">Interactive Portfolio Overview</h2>
+          <p class="mt-5 max-w-4xl text-white/80">
+            Explore each area below to view expanded details on how I support communities and deliver development outcomes.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <button class="portfolio-filter rounded-full border border-neonPurple/50 bg-neonPurple/10 px-4 py-2 text-xs font-semibold text-neonPink" data-track="all">Show All</button>
+            <button class="portfolio-filter rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-semibold text-white/85" data-track="management">Management</button>
+            <button class="portfolio-filter rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-semibold text-white/85" data-track="mentorship">Mentorship</button>
+            <button class="portfolio-filter rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-semibold text-white/85" data-track="development">Development</button>
+          </div>
+          <div class="mt-7 grid gap-5 md:grid-cols-3">
+            <details data-kind="management" class="learn-card group rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur transition hover:border-neonPurple/50">
+              <summary class="cursor-pointer list-none font-semibold text-white group-open:text-neonPink">Management Ops</summary>
+              <p class="mt-3 text-sm leading-relaxed text-white/75">
+                End-to-end operational structure, department accountability, and streamlined staffing frameworks for sustained growth.
+              </p>
+            </details>
+            <details data-kind="mentorship" class="learn-card group rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur transition hover:border-neonPurple/50">
+              <summary class="cursor-pointer list-none font-semibold text-white group-open:text-neonPink">Command Mentorship</summary>
+              <p class="mt-3 text-sm leading-relaxed text-white/75">
+                Practical training for HR, Low Command, and Middle Command members focused on consistency, professionalism, and escalation handling.
+              </p>
+            </details>
+            <details data-kind="development" class="learn-card group rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur transition hover:border-neonPurple/50">
+              <summary class="cursor-pointer list-none font-semibold text-white group-open:text-neonPink">Custom Development</summary>
+              <p class="mt-3 text-sm leading-relaxed text-white/75">
+                Tailored websites, bots, and utility systems built to reduce repetitive tasks and improve internal community performance.
+              </p>
+            </details>
+          </div>
+        </section>
+
+        <section id="portfolio" class="mt-20">
+          <h2 class="text-2xl font-semibold sm:text-3xl">Server Portfolio</h2>
+          <div class="mt-7 grid gap-5 md:grid-cols-2">
+            <article class="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur">
+              <h3 class="text-lg font-semibold">Co-Owned Servers</h3>
+              <ul class="mt-4 space-y-3 text-sm text-white/80">
+                <li class="rounded-full border border-white/10 bg-black/20 px-4 py-2">
+                  <a href="https://discord.gg/gvrpa" target="_blank" rel="noreferrer" class="transition hover:text-neonPink">Greenville Roleplay Affiliation (Current)</a>
+                </li>
+                <li class="rounded-full border border-white/10 bg-black/20 px-4 py-2">Greenville Roleplay Valley (Disbanded)</li>
+                <li class="rounded-full border border-white/10 bg-black/20 px-4 py-2">Greenville Roleplay Justice (Moved and rebranded)</li>
+                <li class="rounded-full border border-white/10 bg-black/20 px-4 py-2">Plus countless other emerging communities.</li>
+              </ul>
+            </article>
+
+            <article class="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur">
+              <h3 class="text-lg font-semibold">High Command Experience</h3>
+              <ul class="mt-4 space-y-3 text-sm text-white/80">
+                <li class="rounded-full border border-white/10 bg-black/20 px-4 py-2">Greenville Roleplay Community (Relocated)</li>
+                <li class="rounded-full border border-white/10 bg-black/20 px-4 py-2">
+                  <a href="https://discord.gg/gvrv" target="_blank" rel="noreferrer" class="transition hover:text-neonPink">Greenville Roleplay Village (Current)</a>
+                </li>
+                <li class="rounded-full border border-white/10 bg-black/20 px-4 py-2">
+                  <a href="https://discord.gg/gvre" target="_blank" rel="noreferrer" class="transition hover:text-neonPink">Greenville Roleplay Empire (Current)</a>
+                </li>
+                <li class="rounded-full border border-white/10 bg-black/20 px-4 py-2">Greenville Roleplay Desire</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="development" class="mt-20">
+          <h2 class="text-2xl font-semibold sm:text-3xl">Development Services</h2>
+          <p class="mt-5 max-w-4xl leading-relaxed text-white/80">
+            Backed by four years of hands-on development experience, I deliver high-quality technical solutions.
+            Whether you need a beautifully designed website, a custom-coded Discord bot, or tailored internal tools,
+            I have the technical expertise to build it efficiently and reliably.
+          </p>
+          <div class="mt-7 grid gap-5 sm:grid-cols-3">
+            <article class="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur">
+              <div class="mb-4 inline-flex rounded-full border border-neonPurple/40 bg-neonPurple/10 p-3 text-neonPink">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l-3 3 3 3m8-6l3 3-3 3M14 4l-4 16" /></svg>
+              </div>
+              <h3 class="font-semibold">Websites</h3>
+              <p class="mt-2 text-sm text-white/75">HTML, CSS, React, Tailwind, JavaScript and polished responsive UI builds.</p>
+            </article>
+
+            <article class="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur">
+              <div class="mb-4 inline-flex rounded-full border border-neonPurple/40 bg-neonPurple/10 p-3 text-neonPink">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L12 19.25 14.25 17M12 4.75V19m7-10a7 7 0 10-14 0v4a2 2 0 002 2h10a2 2 0 002-2V9z" /></svg>
+              </div>
+              <h3 class="font-semibold">Bots</h3>
+              <p class="mt-2 text-sm text-white/75">Custom Discord bots with Python/JavaScript backends and reliable server integrations.</p>
+            </article>
+
+            <article class="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur">
+              <div class="mb-4 inline-flex rounded-full border border-neonPurple/40 bg-neonPurple/10 p-3 text-neonPink">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h10m-10 5h16" /></svg>
+              </div>
+              <h3 class="font-semibold">Tools</h3>
+              <p class="mt-2 text-sm text-white/75">Internal systems and utilities using Linux CLI, Windows CLI, Scale, and full-stack workflows.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer id="contact" class="border-t border-white/10 bg-black/40">
+        <div class="mx-auto max-w-6xl px-5 py-12 sm:px-8 lg:px-10">
+          <h2 class="text-2xl font-semibold sm:text-3xl">Contact</h2>
+          <p class="mt-3 max-w-3xl text-white/75">
+            Ready to elevate your server? Reach out to discuss your next project or management needs.
+          </p>
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <span class="text-sm uppercase tracking-[0.2em] text-white/50">Discord Handle</span>
+            <a
+              href="https://discord.com/users/1239226604782354533"
+              target="_blank"
+              rel="noreferrer"
+              class="inline-flex w-fit items-center gap-2 rounded-full border border-neonPurple/40 bg-gradient-to-r from-neonPurple/20 to-neonPink/20 px-5 py-2 font-semibold text-neonPink transition hover:border-neonPink"
+            >
+              6ntc
+              <span class="text-xs text-white/70">(1239226604782354533)</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const focusContent = {
+        training: 'Training pipelines that improve staff consistency and response quality.',
+        leadership: 'Command frameworks that keep HR, LC, and MC aligned under pressure.',
+        tools: 'Purpose-built utilities that automate repetitive tasks and improve team visibility.'
+      };
+
+      const output = document.getElementById('focus-output');
+      const focusButtons = document.querySelectorAll('.focus-btn');
+      focusButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          output.textContent = focusContent[btn.dataset.focus];
+          focusButtons.forEach((item) => item.classList.remove('border-neonPink/70', 'bg-neonPurple/10'));
+          btn.classList.add('border-neonPink/70', 'bg-neonPurple/10');
+        });
+      });
+
+      const filterButtons = document.querySelectorAll('.portfolio-filter');
+      const learnCards = document.querySelectorAll('.learn-card');
+      filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          filterButtons.forEach((btn) => {
+            btn.classList.remove('border-neonPurple/50', 'bg-neonPurple/10', 'text-neonPink');
+            btn.classList.add('border-white/20', 'bg-white/5', 'text-white/85');
+          });
+          button.classList.remove('border-white/20', 'bg-white/5', 'text-white/85');
+          button.classList.add('border-neonPurple/50', 'bg-neonPurple/10', 'text-neonPink');
+
+          const track = button.dataset.track;
+          learnCards.forEach((card) => {
+            const show = track === 'all' || card.dataset.kind === track;
+            card.style.display = show ? 'block' : 'none';
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
