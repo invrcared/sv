@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creator Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="bento-grid">
+      <section class="glass card profile-card">
+        <h1 class="text-2xl font-bold">Creator Studio</h1>
+        <p class="small mt-1">Manage identity, socials, media, and UI toggles.</p>
+      </section>
+
+      <section class="glass card social-card">
+        <form id="settingsForm" class="grid gap-4">
+          <div>
+            <label class="small">Profile Name</label>
+            <input class="input mt-1" id="profileName" />
+          </div>
+
+          <div>
+            <label class="small">Status line</label>
+            <input class="input mt-1" id="statusLine" />
+          </div>
+
+          <div>
+            <label class="small">Bio text</label>
+            <textarea class="textarea mt-1" id="bioText" rows="3"></textarea>
+          </div>
+
+          <div>
+            <label class="small">Avatar URL</label>
+            <input class="input mt-1" id="avatarUrl" />
+          </div>
+
+          <div>
+            <label class="small">Background media type</label>
+            <select id="backgroundType" class="select mt-1">
+              <option value="image">image</option>
+              <option value="video">video</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="small">Background URL</label>
+            <input class="input mt-1" id="backgroundUrl" />
+          </div>
+
+          <div>
+            <label class="small">Upload image/video background</label>
+            <input id="backgroundFile" class="input mt-1" type="file" accept="image/*,video/*" />
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-3">
+            <label class="small flex items-center gap-2"><input id="verifiedToggle" type="checkbox" /> Verified badge</label>
+            <label class="small flex items-center gap-2"><input id="musicToggle" type="checkbox" /> Music player</label>
+            <label class="small flex items-center gap-2"><input id="clickToggle" type="checkbox" /> Click-to-enter overlay</label>
+          </div>
+
+          <div>
+            <label class="small">Music title</label>
+            <input class="input mt-1" id="musicTitle" />
+          </div>
+          <div>
+            <label class="small">Music URL (mp3/stream)</label>
+            <input class="input mt-1" id="musicUrl" />
+          </div>
+
+          <div>
+            <label class="small">Social links (JSON array: label,url,icon)</label>
+            <textarea class="textarea mt-1 font-mono text-xs" id="socialLinks" rows="8"></textarea>
+          </div>
+
+          <div class="flex gap-3 flex-wrap">
+            <button class="button" type="submit">Save Changes</button>
+            <button class="button" id="uploadBtn" type="button">Upload Background File</button>
+            <button class="button" id="logoutBtn" type="button">Logout</button>
+          </div>
+          <p id="studioNotice" class="small"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="/studio.js"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "profile": {
+    "name": "hamlet",
+    "bio": "minimal links. maximal aura.",
+    "status": "online"
+  },
+  "avatarUrl": "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=300&q=80",
+  "verified": true,
+  "socialLinks": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/",
+      "icon": "github"
+    },
+    {
+      "label": "X",
+      "url": "https://x.com/",
+      "icon": "twitter"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://instagram.com/",
+      "icon": "instagram"
+    },
+    {
+      "label": "YouTube",
+      "url": "https://youtube.com/",
+      "icon": "youtube"
+    }
+  ],
+  "backgroundMedia": {
+    "type": "image",
+    "url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80"
+  },
+  "toggles": {
+    "musicPlayer": false,
+    "clickToEnter": true
+  },
+  "music": {
+    "url": "",
+    "title": ""
+  }
+}
