@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creator Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="grid place-items-center p-4">
+    <form id="loginForm" class="glass card w-full max-w-md">
+      <h1 class="text-2xl font-extrabold mb-2">Creator Studio Login</h1>
+      <p class="small mb-4">Session-based access gate to protect edits.</p>
+      <label class="small" for="password">Password</label>
+      <input id="password" class="input mt-1 mb-4" type="password" required />
+      <button class="button w-full" type="submit">Sign in</button>
+      <p id="loginError" class="small mt-3 text-red-300 hidden"></p>
+    </form>
+
+    <script>
+      document.getElementById('loginForm').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const password = document.getElementById('password').value;
+        const error = document.getElementById('loginError');
+
+        const response = await fetch('/api/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ password })
+        });
+
+        if (response.ok) {
+          window.location.href = '/studio';
+          return;
+        }
+
+        error.textContent = 'Invalid password.';
+        error.classList.remove('hidden');
+      });
+    </script>
+  </body>
+</html>
